@@ -8,12 +8,10 @@ export const LogoContainer = styled.div`
 
 export const ExoticText = styled.h2`
   font-size: 24px;
-  font-weight: 400;
-  font-style: italic;
+  font-weight: 600;
 `;
 
 export const CarsText = styled.h3`
   font-size: 16px;
   font-weight: 300;
-  font-style: italic;
 `;
