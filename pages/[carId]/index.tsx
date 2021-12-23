@@ -2,9 +2,38 @@ import type { GetStaticPaths, NextPage } from "next";
 import { carsJson } from "@assets/index";
 import { GetStaticProps } from "next";
 import { CarDetailProps } from "./types";
+import { Page, Container } from "./styles";
+import DetailCarArea from "@components/DetailCarArea";
+import CarArea from "@components/CarArea";
+import Head from "next/head";
 
 const CarDetail: NextPage<CarDetailProps> = (props) => {
-  return <div>{props.car.id}</div>;
+  return (
+    <Page>
+      <Head>
+        <title>
+          {props.car.brand} {props.car.model}
+        </title>
+        <meta
+          name="description"
+          content={`Rent the ${props.car.brand} ${props.car.model} for just $${props.car.rent} per day!`}
+        />
+      </Head>
+      <Container>
+        <DetailCarArea
+          brand={props.car.brand}
+          iconImg={props.car.iconImg}
+          model={props.car.model}
+          rent={props.car.rent}
+        />
+        <CarArea
+          img={props.car.types[0].pathImg}
+          color={props.car.types[0].color}
+          index={0}
+        />
+      </Container>
+    </Page>
+  );
 };
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {

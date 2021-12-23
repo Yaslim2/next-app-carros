@@ -9,6 +9,7 @@ export const Button = styled.button<ButtonStyleProps>`
   width: 94px;
   height: 36px;
   border-radius: 13px;
+  font-family: "Open Sans", sans-serif;
   border: ${(props) => (props.border ? "2px solid #7B89F4" : "none")};
   background-color: transparent;
   font-size: 15px;

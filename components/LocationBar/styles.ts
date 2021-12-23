@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Image from "next/image";
 
 export const Bar = styled.div`
   background-color: #f3f1fc;
@@ -20,7 +19,7 @@ export const Text = styled.p`
   font-size: 12px;
 `;
 
-export const Icon = styled(Image)`
+export const Icon = styled.img`
   height: 18px;
   width: 18px;
 `;
