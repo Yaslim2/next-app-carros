@@ -5,9 +5,17 @@ import { CarDetailProps } from "./types";
 import { Page, Container } from "./styles";
 import DetailCarArea from "@components/DetailCarArea";
 import CarArea from "@components/CarArea";
+import CarCarousel from "@components/CarCarousel";
 import Head from "next/head";
+import { useState } from "react";
 
 const CarDetail: NextPage<CarDetailProps> = (props) => {
+  const [selectedSlide, setSelectedSlide] = useState<number>(0);
+
+  const handleChangeSlide = (index: number) => {
+    setSelectedSlide(index);
+  };
+
   return (
     <Page>
       <Head>
@@ -27,9 +35,14 @@ const CarDetail: NextPage<CarDetailProps> = (props) => {
           rent={props.car.rent}
         />
         <CarArea
-          img={props.car.types[0].pathImg}
-          color={props.car.types[0].color}
-          index={0}
+          img={props.car.types[selectedSlide].pathImg}
+          color={props.car.types[selectedSlide].color}
+          index={selectedSlide}
+        />
+        <CarCarousel
+          onChangeSlide={handleChangeSlide}
+          selectedSlide={selectedSlide}
+          types={props.car.types}
         />
       </Container>
     </Page>

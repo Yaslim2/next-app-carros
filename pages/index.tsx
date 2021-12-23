@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </Head>
       <Container>
         {carsJson.map((car) => (
-          <CarItem car={car} />
+          <CarItem key={car.id} car={car} />
         ))}
       </Container>
     </Page>
