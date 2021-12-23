@@ -1,4 +1,4 @@
-import { CarJson } from "@store/slices/carsSlice/types";
+import { CarJson } from "@shared/constants/index";
 
 export type CarDetailProps = {
   car: CarJson;

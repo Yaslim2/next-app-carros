@@ -1,10 +1,12 @@
 import { mapPin, calendar, search } from "@assets/index";
+import { RootState } from "@store/types";
+import { useSelector } from "react-redux";
 import { Bar, Location, Icon, Date, Text, Search } from "./styles";
-
-// #F3F1FC
 const LocationBar: React.FC = () => {
+  const isToggle = useSelector((state: RootState) => state.ui.isToggle);
+
   return (
-    <Bar>
+    <Bar isToggle={isToggle}>
       <Location>
         <Icon src={mapPin} width={18} height={18} />
         <Text>North Carolina, NC 90025</Text>

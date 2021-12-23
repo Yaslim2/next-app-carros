@@ -14,6 +14,6 @@ export type CarJson = {
   types: TypesCar[];
 };
 
-export type CarSliceState = {
-  cars: CarJson[];
+export type IsToggleProps = {
+  isToggle?: boolean;
 };

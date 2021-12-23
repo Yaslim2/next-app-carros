@@ -1,2 +1,2 @@
-import carsSlice from "./carsSlice";
-export { carsSlice };
+import uiSlice from "./uiSlice";
+export { uiSlice };

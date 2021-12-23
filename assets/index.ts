@@ -6,6 +6,8 @@ import calendar from "./img/calendar.svg";
 import mapPin from "./img/map-pin.svg";
 import moreSvg from "./img/more.svg";
 import search from "./img/search.svg";
+import menuSvg from "./img/menu.svg";
+import closeSvg from "./img/close.svg";
 
 export {
   carsJson,
@@ -16,4 +18,6 @@ export {
   mapPin,
   moreSvg,
   search,
+  menuSvg,
+  closeSvg,
 };

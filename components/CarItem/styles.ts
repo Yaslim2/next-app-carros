@@ -1,9 +1,10 @@
+import { bgCarItem } from "@shared/themes";
 import styled from "styled-components";
 
 export const AreaCar = styled.div`
   display: flex;
   flex-direction: column;
-  background-color: #f8f8fa;
+  background-color: ${bgCarItem};
   padding: 15px;
   border-radius: 20px;
   cursor: pointer;

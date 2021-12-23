@@ -4,6 +4,7 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: flex-end;
   gap: 4px;
+  margin-right: 10px;
 `;
 
 export const ExoticText = styled.h2`

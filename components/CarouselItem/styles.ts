@@ -7,4 +7,8 @@ export const ItemImage = styled.img<CarouselItemStyleProps>`
   height: ${(props) => (props.isSelected ? "250px" : "150px")};
   cursor: pointer;
   object-fit: contain;
+  @media (max-width: 860px) {
+    width: ${(props) => (props.isSelected ? "400px" : "300px")};
+    height: ${(props) => (props.isSelected ? "200px" : "160px")};
+  }
 `;

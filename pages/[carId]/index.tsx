@@ -1,15 +1,16 @@
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "@store/types";
 import type { GetStaticPaths, NextPage } from "next";
 import { carsJson } from "@assets/index";
 import { GetStaticProps } from "next";
 import { CarDetailProps } from "./types";
 import { Page, Container } from "./styles";
-import DetailCarArea from "@components/DetailCarArea";
-import CarArea from "@components/CarArea";
-import CarCarousel from "@components/CarCarousel";
+import { DetailCarArea, CarArea, CarCarousel } from "@components/index";
 import Head from "next/head";
-import { useState } from "react";
 
 const CarDetail: NextPage<CarDetailProps> = (props) => {
+  const isToggle = useSelector((state: RootState) => state.ui.isToggle);
   const [selectedSlide, setSelectedSlide] = useState<number>(0);
 
   const handleChangeSlide = (index: number) => {
@@ -17,7 +18,7 @@ const CarDetail: NextPage<CarDetailProps> = (props) => {
   };
 
   return (
-    <Page>
+    <Page isToggle={isToggle}>
       <Head>
         <title>
           {props.car.brand} {props.car.model}

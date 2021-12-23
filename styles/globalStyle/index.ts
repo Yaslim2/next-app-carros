@@ -1,3 +1,4 @@
+import { defaultBlack, OpenSans } from "@shared/themes";
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
@@ -9,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
         border: 0;
     }
     body {
-        font-family: "Open Sans", sans-serif;
-        color: #313136;
+        font-family: ${OpenSans};
+        color: ${defaultBlack};
     }
 
     a {

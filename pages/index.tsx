@@ -1,12 +1,16 @@
 import type { NextPage } from "next";
 import { carsJson } from "@assets/index";
 import { Page, Container } from "./styles";
-import CarItem from "@components/CarItem";
+import { CarItem } from "@components/index";
 import Head from "next/head";
+import { useSelector } from "react-redux";
+import { RootState } from "@store/types";
 
 const Home: NextPage = () => {
+  const isToggle = useSelector((state: RootState) => state.ui.isToggle);
+
   return (
-    <Page>
+    <Page isToggle={isToggle}>
       <Head>
         <title>Exotic Cars</title>
         <meta
