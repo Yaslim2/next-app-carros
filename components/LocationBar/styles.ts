@@ -1,5 +1,13 @@
 import { IsToggleProps } from "@shared/constants";
-import { bgLocationBar, secondaryBlack } from "@shared/themes";
+import {
+  bgLocationBar,
+  defaultBlue,
+  locationBarGray,
+  secondaryBlack,
+} from "@shared/themes";
+import { IoCalendar } from "@react-icons/all-files/io5/IoCalendar";
+import { IoSearchOutline } from "@react-icons/all-files/io5/IoSearchOutline";
+import { MdPlace } from "@react-icons/all-files/md/MdPlace";
 import styled from "styled-components";
 
 export const Bar = styled.div<IsToggleProps>`
@@ -26,9 +34,22 @@ export const Text = styled.p`
   font-size: 12px;
 `;
 
-export const Icon = styled.img`
-  height: 18px;
-  width: 18px;
+export const CalendarIcon = styled(IoCalendar)`
+  color: ${locationBarGray};
+  height: 20px;
+  width: 20px;
+`;
+
+export const MapPinIcon = styled(MdPlace)`
+  color: ${locationBarGray};
+  height: 20px;
+  width: 20px;
+`;
+
+export const SearchIcon = styled(IoSearchOutline)`
+  color: ${defaultBlue};
+  height: 20px;
+  width: 20px;
 `;
 
 export const Date = styled.div`

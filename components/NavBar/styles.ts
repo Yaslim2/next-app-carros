@@ -5,13 +5,16 @@ export const Header = styled.header<IsToggleProps>`
   width: 100%;
   box-shadow: 0px 10px 30px #0000001a;
   @media (max-width: 770px) {
-    height: ${(props) => (props.isToggle ? "100%" : null)};
+    height: ${(props) => (props.isToggle ? "100vh" : null)};
     width: ${(props) => (props.isToggle ? "100vw" : null)};
   }
 `;
 
-export const Nav = styled.nav`
+export const Nav = styled.nav<IsToggleProps>`
   padding: 15px;
+  @media (max-width: 770px) {
+    padding: ${(props) => (props.isToggle ? "0px" : null)};
+  }
 `;
 
 export const Ul = styled.ul<IsToggleProps>`
@@ -20,7 +23,7 @@ export const Ul = styled.ul<IsToggleProps>`
   justify-content: space-between;
   align-items: center;
   @media (max-width: 770px) {
-    justify-content: ${(props) => (props.isToggle ? "space-between" : null)};
+    justify-content: ${(props) => (props.isToggle ? "space-around" : null)};
     flex-direction: ${(props) => (props.isToggle ? "column" : null)};
     height: ${(props) => (props.isToggle ? "100vh" : null)};
     align-items: center;

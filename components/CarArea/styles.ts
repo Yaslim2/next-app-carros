@@ -6,7 +6,7 @@ export const Container = styled.div`
   @media (max-width: 860px) {
     flex-direction: column;
     gap: 30px;
-    margin-top: 10px;
+    margin-top: 40px;
   }
 `;
 
@@ -58,9 +58,15 @@ export const ColorArea = styled.div`
 
 export const IndexText = styled.h3`
   font-size: 35px;
+  @media (max-width: 860px) {
+    font-size: 30px;
+  }
 `;
 
 export const ColorText = styled.h4`
   font-size: 25px;
   font-weight: 300;
+  @media (max-width: 860px) {
+    font-size: 20px;
+  }
 `;

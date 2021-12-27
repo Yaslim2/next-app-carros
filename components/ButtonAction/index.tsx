@@ -1,13 +1,17 @@
 import { ButtonActionProps } from "./types";
-import { ActionButton, TextButton, Icon } from "./styles";
-import { arrowBackCatalog, arrowForward } from "@assets/index";
+import {
+  ActionButton,
+  TextButton,
+  ArrowForward,
+  ArrowBackToCatalog,
+} from "./styles";
 
 const ButtonAction: React.FC<ButtonActionProps> = (props) => {
   return (
     <ActionButton {...props}>
-      {props.outline && <Icon src={arrowBackCatalog} alt="arrow to go back" />}
+      {props.outline && <ArrowBackToCatalog />}
       <TextButton outline={props.outline}>{props.children}</TextButton>
-      {!props.outline && <Icon src={arrowForward} alt="arrow to go forward" />}
+      {!props.outline && <ArrowForward />}
     </ActionButton>
   );
 };

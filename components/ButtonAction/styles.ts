@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { defaultBlack, OpenSans } from "@shared/themes";
+import { FiArrowLeft } from "@react-icons/all-files/fi/FiArrowLeft";
+import { FiArrowRight } from "@react-icons/all-files/fi/FiArrowRight";
 import { ButtonActionStyleProps } from "./types";
 
 export const ActionButton = styled.button<ButtonActionStyleProps>`
@@ -35,7 +37,14 @@ export const TextButton = styled.p<ButtonActionStyleProps>`
   }
 `;
 
-export const Icon = styled.img`
+export const ArrowBackToCatalog = styled(FiArrowLeft)`
+  color: ${defaultBlack};
+  width: 24px;
+  height: 20px;
+`;
+
+export const ArrowForward = styled(FiArrowRight)`
+  color: #fff;
   width: 24px;
   height: 20px;
 `;

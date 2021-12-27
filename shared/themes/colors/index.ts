@@ -1,5 +1,8 @@
 export const gradientColor = "#D8D7D7";
 export const defaultBlack = "#313136";
+export const defaultGray = "#C8C8CA";
+export const locationBarGray = "#C4C4C4";
+export const secondaryBlue = "#e6d3f1";
 export const bgCarItem = "#f8f8fa";
 export const bgLocationBar = "#f3f1fc";
 export const secondaryBlack = "#656469";

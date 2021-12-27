@@ -13,7 +13,7 @@ import {
   RentText,
   PerDayText,
 } from "./styles";
-import { moreSvg } from "@assets/index";
+
 import { useRouter } from "next/router";
 
 const CarItem: React.FC<CarItemProps> = (props) => {
@@ -30,7 +30,7 @@ const CarItem: React.FC<CarItemProps> = (props) => {
           <CarTitle>{props.car.brand}</CarTitle>
           <CarSubTitle>{props.car.model.toUpperCase()}</CarSubTitle>
         </CarDetailArea>
-        <Icon src={moreSvg} />
+        <Icon />
       </InfoArea>
       <CarImg src={props.car.pathImg} alt={props.car.brand} />
       <PriceArea>

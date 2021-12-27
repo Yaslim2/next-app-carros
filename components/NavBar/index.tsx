@@ -24,6 +24,9 @@ const NavBar: React.FC<NavBarProps> = () => {
 
   const handleClickOnLogo = () => {
     router.replace("/");
+    if (isToggle) {
+      dispatch(toggle());
+    }
   };
   const handleToggle = () => {
     dispatch(toggle());
@@ -31,7 +34,7 @@ const NavBar: React.FC<NavBarProps> = () => {
 
   return (
     <Header isToggle={isToggle}>
-      <Nav>
+      <Nav isToggle={isToggle}>
         <Ul isToggle={isToggle}>
           <ToggleButton onToggle={handleToggle} />
           <LogoArea onClick={handleClickOnLogo}>

@@ -1,11 +1,10 @@
 import { ArrowButtonProps } from "./types";
-import { ArrowButtonArea, ArrowImg } from "./styles";
-import { arrowBack, arrowForward } from "@assets/index";
+import { ArrowButtonArea, ArrowBack, ArrowForward } from "./styles";
 
 const ArrowButton: React.FC<ArrowButtonProps> = (props) => {
   return (
     <ArrowButtonArea {...props}>
-      <ArrowImg src={props.forward ? arrowForward : arrowBack} />
+      {props.forward ? <ArrowForward /> : <ArrowBack />}
     </ArrowButtonArea>
   );
 };

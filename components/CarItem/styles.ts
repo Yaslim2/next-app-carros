@@ -1,5 +1,6 @@
-import { bgCarItem } from "@shared/themes";
+import { bgCarItem, defaultGray } from "@shared/themes";
 import styled from "styled-components";
+import { FiMoreHorizontal } from "@react-icons/all-files/fi/FiMoreHorizontal";
 
 export const AreaCar = styled.div`
   display: flex;
@@ -28,7 +29,8 @@ export const CarSubTitle = styled.h3`
   font-weight: 300;
 `;
 
-export const Icon = styled.img`
+export const Icon = styled(FiMoreHorizontal)`
+  color: ${defaultGray};
   margin-top: -10px;
   height: 30px;
   width: 30px;

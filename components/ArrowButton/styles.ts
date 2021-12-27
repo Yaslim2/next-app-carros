@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import { ArrowButtonStyleProps } from "./types";
+import { FiArrowLeft } from "@react-icons/all-files/fi/FiArrowLeft";
+import { FiArrowRight } from "@react-icons/all-files/fi/FiArrowRight";
 
 export const ArrowButtonArea = styled.button<ArrowButtonStyleProps>`
   width: 42px;
@@ -17,9 +19,20 @@ export const ArrowButtonArea = styled.button<ArrowButtonStyleProps>`
   }
 `;
 
-export const ArrowImg = styled.img`
+export const ArrowForward = styled(FiArrowRight)`
   height: 24px;
   width: 24px;
+  color: #fff;
+  @media (max-width: 860px) {
+    width: 15px;
+    height: 15px;
+  }
+`;
+
+export const ArrowBack = styled(FiArrowLeft)`
+  height: 24px;
+  width: 24px;
+  color: #fff;
   @media (max-width: 860px) {
     width: 15px;
     height: 15px;
